@@ -16,22 +16,23 @@
 #import "RTCSessionDescriptionDelegate.h"
 #import "RTCPeerConnectionDelegate.h"
 #import "RTCDataChannel.h"
+
 #import "RTCAudioTrack.h"
 #import "RTCAVFoundationVideoSource.h"
 #import "RTCVideoTrack.h"
 
 @interface TLKWebRTC () <
     RTCSessionDescriptionDelegate,
-	RTCDataChannelDelegate,
+    RTCDataChannelDelegate,
     RTCPeerConnectionDelegate>
-RTCDataChannel *dataChannel;
+
 @property (readwrite, nonatomic) RTCMediaStream *localMediaStream;
 
 @property (nonatomic, strong) RTCPeerConnectionFactory *peerFactory;
 @property (nonatomic, strong) NSMutableDictionary *peerConnections;
 @property (nonatomic, strong) NSMutableDictionary *peerToRoleMap;
 @property (nonatomic, strong) NSMutableDictionary *peerToICEMap;
-
+@property (nonatomic, strong) RTCDataChannel *dataChannel;
 @property (nonatomic) BOOL allowVideo;
 @property (nonatomic, strong) AVCaptureDevice *videoDevice;
 
@@ -42,6 +43,7 @@ RTCDataChannel *dataChannel;
 static NSString * const TLKPeerConnectionRoleInitiator = @"TLKPeerConnectionRoleInitiator";
 static NSString * const TLKPeerConnectionRoleReceiver = @"TLKPeerConnectionRoleReceiver";
 static NSString * const TLKWebRTCSTUNHostname = @"stun:stun.l.google.com:19302";
+static NSString * const TLKWebRTCDataChannelLabel = @"respokeDataChannel" ;
 
 @implementation TLKWebRTC
 
@@ -132,12 +134,18 @@ static NSString * const TLKWebRTCSTUNHostname = @"stun:stun.l.google.com:19302";
     return (keys.count == 0) ? nil : keys[0];
 }
 
-- (void)addPeerConnectionForID:(NSString *)identifier {
+- (void)addPeerConnectionForID:(NSString *)identifier caller: (BOOL)isCaller{
+    NSLog(@"addPeerConnectionForID ?");
     RTCPeerConnection *peer = [self.peerFactory peerConnectionWithICEServers:[self iceServers] constraints:[self _mediaConstraints] delegate:self];
-    RTCDataChannelInit *initData = [[RTCDataChannelInit alloc] init];
-    dataChannel = [peer createDataChannelWithLabel:@"respokeDataChannel" config:initData];
-    dataChannel.delegate = self;
-	[peer addStream:self.localMediaStream];
+    if(isCaller){
+        RTCDataChannelInit *initData = [[RTCDataChannelInit alloc] init];
+        self.dataChannel = [peer createDataChannelWithLabel:@"respokeDataChannel" config:initData];
+        self.dataChannel.delegate = self;
+        NSLog(@"Caller");
+    }else{
+        NSLog(@"Answer");
+    }
+    [peer addStream:self.localMediaStream];
     [self.peerConnections setObject:peer forKey:identifier];
 }
 
@@ -358,6 +366,8 @@ static NSString * const TLKWebRTCSTUNHostname = @"stun:stun.l.google.com:19302";
 - (void)peerConnection:(RTCPeerConnection *)peerConnection didOpenDataChannel:(RTCDataChannel *)dataChannel {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"peerConnection didOpenDataChannel?");
+        self.dataChannel = dataChannel;
+        self.dataChannel.delegate = self;
     });
 }
 
@@ -389,7 +399,7 @@ static NSString * const TLKWebRTCSTUNHostname = @"stun:stun.l.google.com:19302";
         case kRTCDataChannelStateClosed:
         {
             NSLog(@"Direct connection CLOSED");
-            dataChannel = nil;
+            //dataChannel = nil;
             //[call directConnectionDidClose:self];
             //dispatch_async(dispatch_get_main_queue(), ^{
                 //[self.delegate onClose:self];
@@ -404,7 +414,7 @@ static NSString * const TLKWebRTCSTUNHostname = @"stun:stun.l.google.com:19302";
 {
     id message = nil;
     NSError *error;
-
+    
     id jsonResult = [NSJSONSerialization JSONObjectWithData:buffer.data options:0 error:&error];
     if (error)
     {
@@ -421,7 +431,7 @@ static NSString * const TLKWebRTCSTUNHostname = @"stun:stun.l.google.com:19302";
         {
             NSDictionary *dict = (NSDictionary*)jsonResult;
             NSString *messageText = [dict objectForKey:@"message"];
-
+            
             if (messageText)
             {
                 NSLog(@"Direct Message received: [%@]", messageText);
@@ -432,4 +442,5 @@ static NSString * const TLKWebRTCSTUNHostname = @"stun:stun.l.google.com:19302";
         }
     }
 }
+
 @end

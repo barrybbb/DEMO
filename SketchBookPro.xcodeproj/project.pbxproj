@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D62AE791C24202B00720BC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62AE781C24202B00720BC1 /* main.m */; };
+		7D62AE7C1C24202B00720BC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62AE7B1C24202B00720BC1 /* AppDelegate.m */; };
+		7D62AE7F1C24202B00720BC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62AE7E1C24202B00720BC1 /* ViewController.m */; };
+		7D62AE821C24202B00720BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D62AE801C24202B00720BC1 /* Main.storyboard */; };
+		7D62AE841C24202B00720BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D62AE831C24202B00720BC1 /* Assets.xcassets */; };
+		7D62AE871C24202B00720BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D62AE851C24202B00720BC1 /* LaunchScreen.storyboard */; };
+		7D62AE921C24202B00720BC1 /* SketchBookProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62AE911C24202B00720BC1 /* SketchBookProTests.m */; };
+		7D62AE9D1C24202B00720BC1 /* SketchBookProUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62AE9C1C24202B00720BC1 /* SketchBookProUITests.m */; };
+		7D62AEAC1C24206900720BC1 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62AEAB1C24206900720BC1 /* DrawView.m */; };
+		7D62AEAF1C2420C500720BC1 /* ColorPaletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62AEAE1C2420C500720BC1 /* ColorPaletteView.m */; };
+		7D62AEB51C24444300720BC1 /* LineEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D62AEB41C24444300720BC1 /* LineEntity.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D62AE8E1C24202B00720BC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D62AE6C1C24202B00720BC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D62AE731C24202B00720BC1;
+			remoteInfo = SketchBookPro;
+		};
+		7D62AE991C24202B00720BC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D62AE6C1C24202B00720BC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D62AE731C24202B00720BC1;
+			remoteInfo = SketchBookPro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D62AE741C24202B00720BC1 /* SketchBookPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SketchBookPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D62AE781C24202B00720BC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D62AE7A1C24202B00720BC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7D62AE7B1C24202B00720BC1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7D62AE7D1C24202B00720BC1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7D62AE7E1C24202B00720BC1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7D62AE811C24202B00720BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D62AE831C24202B00720BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D62AE861C24202B00720BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D62AE881C24202B00720BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D62AE8D1C24202B00720BC1 /* SketchBookProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SketchBookProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D62AE911C24202B00720BC1 /* SketchBookProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SketchBookProTests.m; sourceTree = "<group>"; };
+		7D62AE931C24202B00720BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D62AE981C24202B00720BC1 /* SketchBookProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SketchBookProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D62AE9C1C24202B00720BC1 /* SketchBookProUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SketchBookProUITests.m; sourceTree = "<group>"; };
+		7D62AE9E1C24202B00720BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D62AEAA1C24206900720BC1 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		7D62AEAB1C24206900720BC1 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		7D62AEAD1C2420C500720BC1 /* ColorPaletteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPaletteView.h; sourceTree = "<group>"; };
+		7D62AEAE1C2420C500720BC1 /* ColorPaletteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPaletteView.m; sourceTree = "<group>"; };
+		7D62AEB31C24444300720BC1 /* LineEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineEntity.h; sourceTree = "<group>"; };
+		7D62AEB41C24444300720BC1 /* LineEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineEntity.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D62AE711C24202B00720BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D62AE8A1C24202B00720BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D62AE951C24202B00720BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D62AE6B1C24202B00720BC1 = {
+			isa = PBXGroup;
+			children = (
+				7D62AE761C24202B00720BC1 /* SketchBookPro */,
+				7D62AE901C24202B00720BC1 /* SketchBookProTests */,
+				7D62AE9B1C24202B00720BC1 /* SketchBookProUITests */,
+				7D62AE751C24202B00720BC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D62AE751C24202B00720BC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D62AE741C24202B00720BC1 /* SketchBookPro.app */,
+				7D62AE8D1C24202B00720BC1 /* SketchBookProTests.xctest */,
+				7D62AE981C24202B00720BC1 /* SketchBookProUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D62AE761C24202B00720BC1 /* SketchBookPro */ = {
+			isa = PBXGroup;
+			children = (
+				7D62AE7A1C24202B00720BC1 /* AppDelegate.h */,
+				7D62AE7B1C24202B00720BC1 /* AppDelegate.m */,
+				7D62AE7D1C24202B00720BC1 /* ViewController.h */,
+				7D62AE7E1C24202B00720BC1 /* ViewController.m */,
+				7D62AEAA1C24206900720BC1 /* DrawView.h */,
+				7D62AEAB1C24206900720BC1 /* DrawView.m */,
+				7D62AEB31C24444300720BC1 /* LineEntity.h */,
+				7D62AEB41C24444300720BC1 /* LineEntity.m */,
+				7D62AEAD1C2420C500720BC1 /* ColorPaletteView.h */,
+				7D62AEAE1C2420C500720BC1 /* ColorPaletteView.m */,
+				7D62AE801C24202B00720BC1 /* Main.storyboard */,
+				7D62AE831C24202B00720BC1 /* Assets.xcassets */,
+				7D62AE851C24202B00720BC1 /* LaunchScreen.storyboard */,
+				7D62AE881C24202B00720BC1 /* Info.plist */,
+				7D62AE771C24202B00720BC1 /* Supporting Files */,
+			);
+			path = SketchBookPro;
+			sourceTree = "<group>";
+		};
+		7D62AE771C24202B00720BC1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D62AE781C24202B00720BC1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D62AE901C24202B00720BC1 /* SketchBookProTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D62AE911C24202B00720BC1 /* SketchBookProTests.m */,
+				7D62AE931C24202B00720BC1 /* Info.plist */,
+			);
+			path = SketchBookProTests;
+			sourceTree = "<group>";
+		};
+		7D62AE9B1C24202B00720BC1 /* SketchBookProUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D62AE9C1C24202B00720BC1 /* SketchBookProUITests.m */,
+				7D62AE9E1C24202B00720BC1 /* Info.plist */,
+			);
+			path = SketchBookProUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D62AE731C24202B00720BC1 /* SketchBookPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D62AEA11C24202B00720BC1 /* Build configuration list for PBXNativeTarget "SketchBookPro" */;
+			buildPhases = (
+				7D62AE701C24202B00720BC1 /* Sources */,
+				7D62AE711C24202B00720BC1 /* Frameworks */,
+				7D62AE721C24202B00720BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SketchBookPro;
+			productName = SketchBookPro;
+			productReference = 7D62AE741C24202B00720BC1 /* SketchBookPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D62AE8C1C24202B00720BC1 /* SketchBookProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D62AEA41C24202B00720BC1 /* Build configuration list for PBXNativeTarget "SketchBookProTests" */;
+			buildPhases = (
+				7D62AE891C24202B00720BC1 /* Sources */,
+				7D62AE8A1C24202B00720BC1 /* Frameworks */,
+				7D62AE8B1C24202B00720BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D62AE8F1C24202B00720BC1 /* PBXTargetDependency */,
+			);
+			name = SketchBookProTests;
+			productName = SketchBookProTests;
+			productReference = 7D62AE8D1C24202B00720BC1 /* SketchBookProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D62AE971C24202B00720BC1 /* SketchBookProUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D62AEA71C24202B00720BC1 /* Build configuration list for PBXNativeTarget "SketchBookProUITests" */;
+			buildPhases = (
+				7D62AE941C24202B00720BC1 /* Sources */,
+				7D62AE951C24202B00720BC1 /* Frameworks */,
+				7D62AE961C24202B00720BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D62AE9A1C24202B00720BC1 /* PBXTargetDependency */,
+			);
+			name = SketchBookProUITests;
+			productName = SketchBookProUITests;
+			productReference = 7D62AE981C24202B00720BC1 /* SketchBookProUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D62AE6C1C24202B00720BC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = zhiyuan;
+				TargetAttributes = {
+					7D62AE731C24202B00720BC1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					7D62AE8C1C24202B00720BC1 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 7D62AE731C24202B00720BC1;
+					};
+					7D62AE971C24202B00720BC1 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 7D62AE731C24202B00720BC1;
+					};
+				};
+			};
+			buildConfigurationList = 7D62AE6F1C24202B00720BC1 /* Build configuration list for PBXProject "SketchBookPro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D62AE6B1C24202B00720BC1;
+			productRefGroup = 7D62AE751C24202B00720BC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D62AE731C24202B00720BC1 /* SketchBookPro */,
+				7D62AE8C1C24202B00720BC1 /* SketchBookProTests */,
+				7D62AE971C24202B00720BC1 /* SketchBookProUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D62AE721C24202B00720BC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D62AE871C24202B00720BC1 /* LaunchScreen.storyboard in Resources */,
+				7D62AE841C24202B00720BC1 /* Assets.xcassets in Resources */,
+				7D62AE821C24202B00720BC1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D62AE8B1C24202B00720BC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D62AE961C24202B00720BC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D62AE701C24202B00720BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D62AE7F1C24202B00720BC1 /* ViewController.m in Sources */,
+				7D62AE7C1C24202B00720BC1 /* AppDelegate.m in Sources */,
+				7D62AEB51C24444300720BC1 /* LineEntity.m in Sources */,
+				7D62AEAC1C24206900720BC1 /* DrawView.m in Sources */,
+				7D62AE791C24202B00720BC1 /* main.m in Sources */,
+				7D62AEAF1C2420C500720BC1 /* ColorPaletteView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D62AE891C24202B00720BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D62AE921C24202B00720BC1 /* SketchBookProTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D62AE941C24202B00720BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D62AE9D1C24202B00720BC1 /* SketchBookProUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D62AE8F1C24202B00720BC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D62AE731C24202B00720BC1 /* SketchBookPro */;
+			targetProxy = 7D62AE8E1C24202B00720BC1 /* PBXContainerItemProxy */;
+		};
+		7D62AE9A1C24202B00720BC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D62AE731C24202B00720BC1 /* SketchBookPro */;
+			targetProxy = 7D62AE991C24202B00720BC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D62AE801C24202B00720BC1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D62AE811C24202B00720BC1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D62AE851C24202B00720BC1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D62AE861C24202B00720BC1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D62AE9F1C24202B00720BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7D62AEA01C24202B00720BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D62AEA21C24202B00720BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SketchBookPro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyuan3g.SketchBookPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D62AEA31C24202B00720BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SketchBookPro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyuan3g.SketchBookPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7D62AEA51C24202B00720BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SketchBookProTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyuan3g.SketchBookProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SketchBookPro.app/SketchBookPro";
+			};
+			name = Debug;
+		};
+		7D62AEA61C24202B00720BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SketchBookProTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyuan3g.SketchBookProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SketchBookPro.app/SketchBookPro";
+			};
+			name = Release;
+		};
+		7D62AEA81C24202B00720BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SketchBookProUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyuan3g.SketchBookProUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SketchBookPro;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		7D62AEA91C24202B00720BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SketchBookProUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyuan3g.SketchBookProUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SketchBookPro;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D62AE6F1C24202B00720BC1 /* Build configuration list for PBXProject "SketchBookPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D62AE9F1C24202B00720BC1 /* Debug */,
+				7D62AEA01C24202B00720BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D62AEA11C24202B00720BC1 /* Build configuration list for PBXNativeTarget "SketchBookPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D62AEA21C24202B00720BC1 /* Debug */,
+				7D62AEA31C24202B00720BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D62AEA41C24202B00720BC1 /* Build configuration list for PBXNativeTarget "SketchBookProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D62AEA51C24202B00720BC1 /* Debug */,
+				7D62AEA61C24202B00720BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D62AEA71C24202B00720BC1 /* Build configuration list for PBXNativeTarget "SketchBookProUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D62AEA81C24202B00720BC1 /* Debug */,
+				7D62AEA91C24202B00720BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D62AE6C1C24202B00720BC1 /* Project object */;
+}

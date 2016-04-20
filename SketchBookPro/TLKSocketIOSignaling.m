@@ -198,24 +198,26 @@
     self.socket.errorBlock = ^(NSError *error) { [weakSelf _socketReceivedError:error]; };
     
     self.socket.reconnectionLimit = 5.0f;
-
-    if (!self.webRTC) {
-        if (self.allowVideo && self.videoDevice) {
-            self.webRTC = [[TLKWebRTC alloc] initWithVideoDevice:self.videoDevice];
-        } else {
-            self.webRTC = [[TLKWebRTC alloc] initWithVideo:NO];
-        }
-        self.webRTC.delegate = self;
-    }
     
     [self.socket connectWithSuccess:^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            TLKSocketIOSignaling *strongSelf = weakSelf;
-            strongSelf.localMediaStream = strongSelf.webRTC.localMediaStream;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             
-            if (successCallback) {
-                successCallback();
+            if (!weakSelf.webRTC) {
+                if (weakSelf.allowVideo && weakSelf.videoDevice) {
+                    weakSelf.webRTC = [[TLKWebRTC alloc] initWithVideoDevice:self.videoDevice];
+                } else {
+                    weakSelf.webRTC = [[TLKWebRTC alloc] initWithVideo:NO];
+                }
+                weakSelf.webRTC.delegate = weakSelf;
             }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.localMediaStream = weakSelf.webRTC.localMediaStream;
+                
+                if (successCallback) {
+                    successCallback();
+                }
+            });
         });
     } andFailure:^(NSError *error) {
         DLog(@"Failed to connect socket.io: %@", error);
@@ -238,7 +240,7 @@
             NSDictionary* clients = data[1][@"clients"];
             
             [[clients allKeys] enumerateObjectsUsingBlock:^(id peerID, NSUInteger idx, BOOL *stop) {
-                [self.webRTC addPeerConnectionForID:peerID];
+                [self.webRTC addPeerConnectionForID:peerID caller: true];
                 [self.webRTC createOfferForPeerWithID:peerID];
                 
                 [self.currentClients addObject:peerID];
@@ -410,10 +412,10 @@
         
     } else if ([dictionary[@"type"] isEqualToString:@"offer"]) {
         
-        [self.webRTC addPeerConnectionForID:dictionary[@"from"]];
+        [self.webRTC addPeerConnectionForID:dictionary[@"from"] caller: false];
         [self.currentClients addObject:dictionary[@"from"]];
         
-        // Fix for browser-to-app connection crash using beta API.
+        // Fix for browsero-app connection crash using beta API.
         NSString* origSDP = dictionary[@"payload"][@"sdp"];
         NSError* error;
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"m=application \\d+ DTLS/SCTP 5000 *"
